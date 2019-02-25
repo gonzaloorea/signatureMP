@@ -25,7 +25,7 @@ function Locations(props){
 	          <Typography component="p">{props.sede.direccion1}</Typography>
 	          <Typography component="p">{props.sede.direccion2}</Typography>
 	          <Typography component="p">{props.sede.telefono1}</Typography>
-            <Typography component="p">{props.sede.telefono2}</Typography>
+            
 	        </React.Fragment>);
 }
 
