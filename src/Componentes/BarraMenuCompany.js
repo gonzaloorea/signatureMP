@@ -47,13 +47,20 @@ class MyCompanyAppBar extends React.Component {
   };
   render() {
     const { classes } = this.props;
-    const lista = this.props.listaseleccion.map((elem)=>
+
+    const lista = this.props.listaseleccion.sort(function(a,b){
+                                                    var x = a.name.toLowerCase();
+                                                    var y = b.name.toLowerCase();
+                                                    if (x < y) {return -1;}
+                                                    if (x > y) {return 1;}
+                                                    return 0;})
+                                            .map((elem)=>
       <MenuItem onClick={this.handleClose} key={elem[this.props.keytoiterate].toString()} >{elem[this.props.keytoiterate]}</MenuItem>
     );
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" style={{ backgroundColor: "#BA0C2F" }}>
+        <AppBar position="static" style={{ backgroundColor: "#BA0C2F", marginBottom:20 }}>
           <Toolbar>
             <IconButton
               className={classes.menuButton}

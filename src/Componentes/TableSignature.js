@@ -24,7 +24,7 @@ class TableSignature extends React.Component {
                                     <table border={0} cellSpacing={0} cellPadding={0}>
                                         <tbody>
                                             <tr>
-                                                <td><img src={`./images/${this.props.logo}.png`} alt="logo MP"  height={43} /></td>
+                                                <td><img src={`./images/${usuario.pathlogo}.png`} alt="logo MP"  height={43} /></td>
                                                 <td style={{width:10}}></td>
                                             </tr>
                                         </tbody>
@@ -35,44 +35,68 @@ class TableSignature extends React.Component {
                                         <tbody>
                                              <tr>
                                                 <td style={{width:10}} className='separador'></td>
-                                                <td  style={{borderLeft:'solid 1px #909da7', padding:0, margin:0, verticalAlign:'top'}}>
+                                                <td  style={{borderLeft:'solid 1px #d0d3d4', padding:0, margin:0, verticalAlign:'top'}}>
                                                      <table border={0} cellSpacing={0} cellPadding={0}>
                                                         <tbody>
                                                             <tr>
-                                                                <td width={5}></td>
                                                                 <td>
-                                                                    <span id="nombre" style={{fontFamily: 'arial narrow, helvetica, sans-serif',fontSize: 12, color: '#b70039', textTransform:'capitalize'}}>
-                                                                        {`${usuario.username} `}
-                                                                    </span>
-                                                                </td>
-                                                                <td width={5}></td>
-                                                                <td>
-                                                                    <span id="apellidos" style={{fontFamily: 'arial narrow, helvetica, sans-serif', fontSize: 12, color: '#666666', textTransform:'uppercase'}}>
-                                                                        {` ${usuario.surname}`}
-                                                                    </span>
+                                                                    <table border={0} cellSpacing={0} cellPadding={0}>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width={5}></td>
+                                                                                <td>
+                                                                                    <span id="nombre" style={{fontFamily: 'arial narrow, helvetica, sans-serif',fontSize: 12, color: '#b70039', textTransform:'capitalize'}}>
+                                                                                        {`${usuario.username} `}
+                                                                                    </span>
+                                                                                </td>
+                                                                                <td width={5}></td>
+                                                                                <td>
+                                                                                    <span id="apellidos" style={{fontFamily: 'arial narrow, helvetica, sans-serif', fontSize: 12, color: '#666666', textTransform:'uppercase'}}>
+                                                                                        {` ${usuario.surname}`}
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td width={5}></td>
-                                                                <td colspan="3">
-                                                                    <span id="jobtittlees" style={{fontFamily: "arial narrow, helvetica, sans-serif",fontSize: 12, color: "#5B6770", fontWeight:'bold', textTransform:'capitalize'}}>
-                                                                        {usuario.nativejobtitle}
-                                                                    </span>
+                                                                <td>
+                                                                    <table border={0} cellSpacing={0} cellPadding={0}>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width={5}></td>
+                                                                                <td>
+                                                                                    <span id="jobtittlees" style={{fontFamily: "arial narrow, helvetica, sans-serif",fontSize: 12, color: "#5B6770", fontWeight:'bold', textTransform:'capitalize'}}>
+                                                                                        {usuario.nativejobtitle}
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
                                                                 </td>
                                                             </tr>                                                                      
                                                             <tr>
-                                                                <td width={5}></td>
-                                                                <td colspan="3">
-                                                                    <span id="jobtittleen" style={{fontFamily: 'arial narrow, helvetica, sans-serif',fontSize: 12, color: '#717D87'}}>
-                                                                        {usuario.englishjobtitle}
-                                                                    </span>
-                                                                </td>           
+                                                                <td>
+                                                                    <table border={0} cellSpacing={0} cellPadding={0}>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width={5}></td>
+                                                                                <td>
+                                                                                    <span id="jobtittleen" style={{fontFamily: 'arial narrow, helvetica, sans-serif',fontSize: 12, color: '#717D87', textTransform:'capitalize'}}>
+                                                                                        {usuario.englishjobtitle}
+                                                                                    </span>
+                                                                                </td> 
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>         
                                                             </tr>
                                                         </tbody>
                                                     </table>
                                                 </td>
                                                 <td style={{width:10}} className='separador'></td>
-                                                <td  style={{borderLeft:'solid 1px #909da7', padding:0, margin:0, verticalAlign:'top'}}>
+                                                <td  style={{borderLeft:'solid 1px #d0d3d4', padding:0, margin:0, verticalAlign:'top'}}>
                                                     <table border={0} cellSpacing={0} cellPadding={0}>
                                                         <tbody>
                                                             <tr>
@@ -80,25 +104,27 @@ class TableSignature extends React.Component {
                                                                 <td style={{textAlign :'left',verticalAlign:'middle'}}>
                                                                     <img src={`./images/mail_icon.png`} alt="mail" style={{display:'block'}} />
                                                                 </td>
-                                                                 <td style={{textAlign :'left',verticalAlign:'top'}}>
-                                                                    <p style={{marginTop:0, marginBottom:0, marginLeft:5}}  id="usermail">
-                                                                        <a href={`mailto:${usuario.usermail}@${usuario.maildomain}`} style={{textDecoration:'none',fontFamily: 'arial narrow, helvetica, sans-serif',fontSize: 12, color: '#b70039'}}>{`${usuario.usermail}@${usuario.maildomain}`}</a>
-                                                                    </p>
+                                                                 <td style={{textAlign :'left',verticalAlign:'top',paddingLeft:3}}>
+                                                                    
+                                                                        <a href={`mailto:${usuario.usermail}@${usuario.maildomain}`} style={{textDecoration:'none',fontFamily: 'arial narrow, helvetica, sans-serif',fontSize: 12, color: '#5B6770'}}>{`${usuario.usermail}@${usuario.maildomain}`}</a>
+                                                                  
                                                                 </td>
                                                             </tr>
+                                                            {(usuario.mobilephone !== '')?(
                                                             <tr>
                                                                 <td width={5}></td>
                                                                 <td style={{textAlign :'left',verticalAlign:'middle'}}>
                                                                     <img src={`./images/mobile_icon.png`} alt="mobile" style={{display:'block'}} />
                                                                 </td>
-                                                                <td style={{textAlign :'left',verticalAlign:'top'}}>
-                                                                    <p style={{marginTop:0, marginBottom:0, marginLeft:5}}  id="usermail">
+                                                                <td style={{textAlign :'left',verticalAlign:'top',paddingLeft:3}}>
+                                                                    
                                                                         <span id="mobileuser" style={{fontFamily: 'arial narrow, helvetica, sans-serif', fontSize: 12, color: '#666666', textTransform:'uppercase'}}>
                                                                             {usuario.mobilephone}
                                                                         </span>
-                                                                    </p>
+                                                                    
                                                                 </td>
                                                             </tr>
+                                                            ):null}
                                                         </tbody>
                                                     </table>
                                                 </td>
@@ -124,7 +150,9 @@ class TableSignature extends React.Component {
                     <tbody>
                         <tr>
                             <td valign="top" style={{textAlign :'left'}}>
-                                <img src={`./images/${this.props.logo}_pie.jpg`} alt="imagen MP"  style={{display:'block'}} />
+                                <a href={`http://media.macpuarsa.es/FIRMAS/MPASCENSORES/2019/redirect.html?logo=${usuario.pathlogo}&language=${usuario.idioma}`}>
+                                    <img src={`./images/${usuario.pathlogo}_pie_${usuario.idioma}.jpg`} alt="imagen MP"  style={{display:'block'}} />
+                                </a>
                             </td>
                         </tr>
                     </tbody>
@@ -140,13 +168,10 @@ class TableSignature extends React.Component {
                                 {(usuario.office!=null)?(
                                     <React.Fragment>
                                         <div style={{marginTop:0, marginBottom:0, marginLeft:5,fontFamily: 'arial narrow, helvetica, sans-serif',fontSize: 12, color: '#5B6770'}}  id="locationuser">
-                                            {`${usuario.office.nombresede} `}
-                                            <span style={{color:'#CC0033', fontSize:18}}>&#8226;</span>
-                                            {` ${usuario.office.direccion1} `}
-                                            <span style={{color:'#CC0033', fontSize:18}}>&#8226;</span>
-                                            {` ${usuario.office.direccion2} `}
-                                            <span style={{color:'#CC0033', fontSize:18}}>&#8226;</span>
-                                            {` ${usuario.office.telefono1} `}
+                                            {(usuario.office.direccion1 !== '')?(<React.Fragment>{usuario.office.direccion1} </React.Fragment>):null}
+                                            {(usuario.office.direccion2 !== '')?(<React.Fragment><span style={{color:'#CC0033', fontSize:18}}>&#8226;</span> {usuario.office.direccion2} </React.Fragment>):null}
+                                            {(usuario.office.telefono1 !== '')?(<React.Fragment><span style={{color:'#CC0033', fontSize:18}}>&#8226;</span> {usuario.office.telefono1} </React.Fragment>):null}
+                                            {(usuario.extofficephone !== '')?(<React.Fragment><span style={{color:'#CC0033', fontSize:18}}>&#8226;</span> Ext: {usuario.extofficephone}</React.Fragment>):null}
                                         </div>
                                     </React.Fragment>
                                 ):(<div></div>)}
@@ -157,9 +182,9 @@ class TableSignature extends React.Component {
                                 <img src={`./images/link_icon.png`} alt="website" />
                             </td>
                             <td style={{textAlign :'left',verticalAlign:'top'}}>
-                                <p style={{marginTop:0, marginBottom:0, marginLeft:5}}>
+      
                                     <a href={`http://www.${usuario.webdomain}`} style={{textDecoration:'none',fontFamily: 'arial narrow, helvetica, sans-serif',fontSize: 12, color: '#b70039'}}>{`www.${usuario.webdomain}`}</a>
-                                </p>
+
                             </td>
                         </tr>
                     </tbody>

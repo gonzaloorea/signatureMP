@@ -18,13 +18,13 @@ const styles = {
   },
 };
 
-function Locations(props){
+function LocationsInfo(props){
 
   return (<React.Fragment>
 	          <Typography gutterBottom variant="subtitle2" component="subtitle2" style={{fontWeight:'bold'}}>{props.sede.nombresede}</Typography>
-	          <Typography component="p">{props.sede.direccion1}</Typography>
-	          <Typography component="p">{props.sede.direccion2}</Typography>
-	          <Typography component="p">{props.sede.telefono1}</Typography>
+	          <Typography variant="caption">{props.sede.direccion1}</Typography>
+	          <Typography variant="caption">{props.sede.direccion2}</Typography>
+	          <Typography variant="caption">{props.sede.telefono1}</Typography>
             
 	        </React.Fragment>);
 }
@@ -45,7 +45,7 @@ function MediaCard(props) {
           title={`${props.nombre.imagensede}`}
         />
         <CardContent style={{margin:2,padding:2}}>
-          <Locations sede={props.nombre} />
+          <LocationsInfo sede={props.nombre} />
         </CardContent>
       </CardActionArea>
     </Card>

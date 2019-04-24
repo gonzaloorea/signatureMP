@@ -6,13 +6,12 @@ const styles = {
 	root:{
 		marginLeft: 10,
     	marginRight: 10,
-    	maxWidth: 260,
 	}
 };
 
 
 const inputProps = {
-    step: 300,
+    step: 350,
 };
 
 
@@ -30,8 +29,9 @@ class CampoTexto extends Component {
 		const {classes} = this.props;
 		return(
 			<TextField 
-				variant='standard' 
-				style={{margin: 'auto 10px'}} 
+				variant='standard'
+				fullWidth
+				style={{margin: 'auto 10px'}}
 				className={classes.root} 
 				margin="normal" 
 				id={this.props.idvalue} 

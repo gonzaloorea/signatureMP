@@ -9,12 +9,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 const styles = {
 	root : {
-		width: 200,
+
 		margin:20
 	},
 	formControl : {
 		margin : 5,
-		minWidth : 200
+
 	},
 	inputs:{
 		minWidth: 200,

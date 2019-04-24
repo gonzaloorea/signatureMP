@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+	<h1>Redireccionando /Redirecting ...</h1>
+	<p id="logo"></p>
+	<p id="idioma"></p>
+
+	<script>
+		/*
+		var params = (new URL(document.location)).searchParams;
+		var logo = params.get("logo");
+		var idioma = params.get("idioma");
+		*/
+
+		var queryParams = window.location.search.substr(1).split('&').reduce(function (q, query) {
+		  var chunks = query.split('=');
+		  var key = chunks[0];
+		  var value = chunks[1];
+		  return (q[key] = value, q);
+		}, {});
+
+		/*
+		document.getElementById('idioma').innerHTML=queryParams.language;
+		document.getElementById('logo').innerHTML=queryParams.logo;
+		*/
+		if(queryParams.logo == 'MP-DISTRIBUTION-DTC'){
+			window.location.replace("https://www.mp-servicenter.com/portal");
+		}else{
+			if(queryParams.language == 'es'){
+				window.location.replace("http://mpascensores.es/mp-ascensores-conectados/");
+			}else{
+				window.location.replace("http://mpascensores.es/mp-connected-lifts/?lang=en");
+			}
+		}
+	</script>
+</body>
+</html>
