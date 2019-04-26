@@ -18,7 +18,7 @@ import SaveIcon from '@material-ui/icons/Save';
 import Clipboard from "react-clipboard.js";
 
 import './App.css';
-import {sedesMP,logosMP} from './data/datos.js';
+import {sedesMP,logosMP} from './data/datos.js'; // aquí sedesMP y logosMP son variables globales que cualquier componente puede consumir
 
 
 function Logo(props) {

@@ -27,7 +27,8 @@ class MyCompanyAppBar extends React.Component {
     super(props);
     this.state = {
       anchorEl: null,
-      valor: "todavia no ha elegido!!!"
+      valor: "todavia no ha elegido!!!",
+      logosMP:null
     };
   }
   handleClick = event => {
@@ -45,6 +46,22 @@ class MyCompanyAppBar extends React.Component {
     });
     this.props.logoseleccionado(event.target.childNodes[0].nodeValue);
   };
+
+  componentWillMount(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response=>{
+        return response.json()
+      })
+      .then(response=>{
+        this.setState({
+          logosMP: response
+        })
+      })
+      .catch(error=>{
+        console.log(error.message);
+      });
+  }
+  
   render() {
     const { classes } = this.props;
 

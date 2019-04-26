@@ -356,7 +356,7 @@ let sedesMP = [
     nombresede: 'MP HISS KALMAR',
     direccion1 : 'Flottiljvägen 20',
     direccion2 : '392 41 Kalmar',
-    telefono1 : '0046 0480 314477',
+    telefono1 : '+46 (0) 480- 31 44 77',
     telefono2 : '',
     fax : '',
     logoname : 'MP HISS',
@@ -367,7 +367,7 @@ let sedesMP = [
     nombresede: 'MP HISS STOCKHOLM',
     direccion1 : 'Kistagången 12 ',
     direccion2 : '16440 Kista',
-    telefono1 : '0046 0480 31 4477',
+    telefono1 : '+46 (0) 480- 31 44 77',
     telefono2 : '',
     fax : '',
     logoname : 'MP HISS',
@@ -378,7 +378,7 @@ let sedesMP = [
     nombresede: 'MP HISS KARLSKRONA',
     direccion1 : 'Kollonivägen 65',
     direccion2 : '371 54 Karlskrona',
-    telefono1 : '0046 0480 314477',
+    telefono1 : '+46 (0) 480- 31 44 77',
     telefono2 : '',
     fax : '',
     logoname : 'MP HISS',
@@ -628,7 +628,7 @@ let logosMP = [
     name : 'MP LIFTEN_NL',
     path : 'MP-LIFTEN_NL',
     emaildomain : {
-      nl : 'mpliften.com',
+      nl : 'mpliften.nl',
     },
     webdomain: {
       nl : 'mpliften.nl'
