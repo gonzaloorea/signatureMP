@@ -50,7 +50,7 @@ class MyCompanyAppBar extends React.Component {
   componentWillMount(){
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response=>{
-        return response.json()
+        return response.json();
       })
       .then(response=>{
         this.setState({
