@@ -32,7 +32,7 @@ function Logo(props) {
 function SubHeader(props) {
     return (
       <header className="App-subheader">
-        <Typography variant='h4' style={{color:'white'}}>{`Configura tu firma / Set up your signature`}</Typography>
+        <Typography variant='h3 ' style={{color:'white'}}>{`Configura tu firma / Set up your signature`}</Typography>
       </header>
     );
 }
